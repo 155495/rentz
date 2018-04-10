@@ -55,7 +55,7 @@ if(!isset($_SESSION['username'])){
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Rentz <span class="sr-only">(current)</span></a></li>
             <li><a href="p.index.php?d=2">Add a Car</a></li>
-            <li><a href="#">Currnt Booked Car</a></li>
+            <li><a href="p.index.php?d=4">Currnt Booked Car</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="">Previously booked car</a></li>
@@ -97,6 +97,12 @@ if(!isset($_SESSION['username'])){
 							<h2 class="sub-header " align="center">Add A Car</h2>
 							<?php
 							include('../user/add_car.php');
+									 break;
+				case 4: 
+							?> 
+							<h2 class="sub-header " align="center">My Booked Cars</h2>
+							<?php
+							include('currentbooked_cars.php');
 									 break;
 				}?>
           

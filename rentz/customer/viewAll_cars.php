@@ -63,7 +63,7 @@ $pgs=$typ;
          <td><?php echo $pgs[$a]['car_regno']; ?></td>
         <td class="center"> <img src="../<?php echo $pgs[$a]['car_image']; ?>" width="100" height="100" alt="Loading...."></td>
         <td class="center" style="width:80px;">
-        <a class="btn btn-info btn-xs" href="index.php?d=3&id=<?php echo $pgs[$a]['id']; ?>"><i class="glyphicon glyphicon-pencil"></i></a>
+        <a class="btn btn-info btn-xs" href="p.index.php?d=3&id=<?php echo $pgs[$a]['id']; ?>"><i class="glyphicon glyphicon-pencil"></i></a>
         <a class="btn btn-danger btn-xs" href="delete_car.php?id=<?php echo $pgs[$a]['id']; ?>"><i class="glyphicon glyphicon-trash"></i></a>			
 		</td>
       </tr>
