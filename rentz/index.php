@@ -86,7 +86,7 @@
 		     include('user/add_car.php');
 				break;
 			case 4:
-		     include('user/search_car.php');
+		     include('user/search_all_cars.php');
 				break;
 			case 5:
 		     include('signin.php');

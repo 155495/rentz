@@ -1,17 +1,9 @@
 <?php 
-include('../config.php');
-//include_once('../data/data_functions.php');
-/*$connection = mysqli_connect('localhost', 'root', '');
-if (!$connection){
-    die("Database Connection Failed" . mysqli_error($connection));
-}
-$select_db = mysqli_select_db($connection, 'rentz');
-if (!$select_db){
-    die("Database Selection Failed" . mysqli_error($connection));
-}*/
-$UNM= $_SESSION['username'];
+include('config.php');
 
-$a=0;
+//$UNM= $_SESSION['username'];
+
+	$a=0;
 	$typ=array();
 	$sql="SELECT * FROM `tbl_cars` WHERE `car_sts`= 0  ORDER BY `id` DESC";
 	$result=mysqli_query($connection,$sql);
@@ -43,7 +35,7 @@ $a=0;
 $pCnt=count($typ);
 $pgs=$typ;
 ?>
-<table id="example1" class="table table-bordered table-striped">
+<!--<table id="example1" class="table table-bordered table-striped">
     <thead>
       <tr>
         <th>Slno</th>
@@ -55,7 +47,7 @@ $pgs=$typ;
       </tr>
     </thead>   
     <tbody>
-   <?php  for($a=0;$a<$pCnt;$a++){?>
+   <?php  /*for($a=0;$a<$pCnt;$a++){?>
       <tr>
       	<td class="center"><?php echo $a+1; ?></td>
         <td><?php echo $pgs[$a]['car_model']; ?></td>
@@ -63,9 +55,25 @@ $pgs=$typ;
          <td><?php echo $pgs[$a]['car_regno']; ?></td>
         <td class="center"> <img src="../<?php echo $pgs[$a]['car_image']; ?>" width="100" height="100" alt="Loading...."></td>
         <td class="center" style="width:80px;">
-        <a class="btn btn-danger btn-xs" href="c.index.php?d=4&cid=<?php echo $pgs[$a]['id']; ?>&pid=<?php echo $UNM;?>">Book Now</i></a>			
+        <a class="btn btn-danger btn-xs" href="c.index.php?d=4&cid=<?php echo $pgs[$a]['id']; ?>&pid=<?php echo "123";?>">Book Now</i></a>			
 		</td>
       </tr>
-     <?php }?>
+      <?php }*/
+	  
+	  
+	  
+	  ?>
+      
 	</tbody>
-</table>
+</table>-->
+<?php if($pCnt==0){?>
+	<h2> No Cars Availiable Now ..All Are Booked</h2>
+	<?php }?>
+ <?php  for($a=0;$a<$pCnt;$a++){?>
+<div class="col-lg-4">
+          <img class="img-circle" src="<?php echo $pgs[$a]['car_image']; ?>" alt="Generic placeholder image" width="180" height="180">
+          <h2><?php echo $pgs[$a]['car_company_name']; ?></h2>
+          <p><?php echo $pgs[$a]['car_model']; ?></p>
+          <p><a class="btn btn-default" href="customer/c.index.php?d=4&cid=<?php echo $pgs[$a]['id']; ?>" role="button">Book Now &raquo;</a></p>
+        </div>
+   <?php }

@@ -2,19 +2,19 @@
         <div class="col-lg-4">
           <img class="img-circle" src="img/rent-a-car.jpg" alt="Generic placeholder image" width="180" height="180">
           <h2>RENT</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>Once again Myles proves that customer satisfaction is in his top most priority.</p>
+          <p><a class="btn btn-default" href="index.php?d=1" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
+          <img class="img-circle" src="img/pic104.jpg" alt="Generic placeholder image" width="180" height="180">
           <h2>SEARCH </h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>Hi, a best option to enjoy holidays at outstation. Hired a Myles car on self-drive basis at Mangalore.</p>
+          <p><a class="btn btn-default" href="index.php?d=4" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
+          <img class="img-circle" src="img/Mustang-Wallpapers-31.jpg" alt="Generic placeholder image" width="180" height="180">
           <h2>BOOK</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p>Had a wonderful experience with Carzonrent-Gurgaon!! Took the Myles car all the way to Dharamkot.</p>
+          <p><a class="btn btn-default" href="index.php?d=2" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div>

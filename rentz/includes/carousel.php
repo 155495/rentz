@@ -30,7 +30,7 @@
             <div class="carousel-caption">
               <h1>DRIVE IN THE CITY & OUTSTATION</h1>
               <p>We serve thousands of travellers to find the perfect cabs for both holiday and business trips</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              <p><a class="btn btn-lg btn-primary" href="index.php?d=2" role="button">Sign up today</a></p>
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@
             <div class="carousel-caption">
               <h1>Your Ultimate Travel Partner</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <p><a class="btn btn-lg btn-primary" href="index.php?d=4" role="button">Browse gallery</a></p>
             </div>
           </div>
         </div>

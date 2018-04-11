@@ -1,5 +1,10 @@
 <?php
-	$pid=$_GET['pid'];
+	if(!isset($_GET['pid'])){
+		$pid=$_SESSION['username'];
+		}
+		else{
+	$pid=$_GET['pid'];}
+	
 	if(isset($_GET['cid'])){
 		$carid=$_GET['cid'];
 		
