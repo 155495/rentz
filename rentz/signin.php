@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="file:///C|/wamp64/www/favicon.ico">
-
-    <title>Signin</title>
+    <meta name="author" content=""><title>Signin</title>
     <?php include('includes/head.php'); ?>
     
     <style>
 	body {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top:0px;
+  padding-bottom:0px;
   background-color: #eee;
 }
 
@@ -61,19 +58,19 @@
 
 <div class="container" >
 
-      <form class="form-signin">
+      <form class="form-signin" action="user/db_login.php" method="post" enctype="multipart/form-data">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Licence Number</label>
-        <input type="number" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="number" id="inputEmail" class="form-control" placeholder="Licence Number" name="user" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="pass" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <a href=""><h4 class="form-signin-heading"> New User ?</h4></a>
+        <a href="index.php?d=2"><h4 class="form-signin-heading"> New User ?</h4></a>
       </form>
 
     </div> 

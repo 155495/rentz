@@ -47,7 +47,7 @@ $car=get_single_cars($carid);
      <div class="form-group ">
        
        	<button  type="submit" class="btn btn-primary">Book Now</button>
-  		<button   type="cancel" class="btn btn-default">Cancel</button>
+  		<button   type="reset" class="btn btn-default">Cancel</button>
        
       </div> 
 </form>

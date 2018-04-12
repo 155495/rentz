@@ -58,7 +58,6 @@ if(!isset($_SESSION['username'])){
             <li><a href="p.index.php?d=4">Currnt Booked Car</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">Previously booked car</a></li>
             <li><a href="p.index.php?d=1">View All cars</a></li>
           </ul>
           

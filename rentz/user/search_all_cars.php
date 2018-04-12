@@ -70,10 +70,10 @@ $pgs=$typ;
 	<h2> No Cars Availiable Now ..All Are Booked</h2>
 	<?php }?>
  <?php  for($a=0;$a<$pCnt;$a++){?>
-<div class="col-lg-4">
+<div class="col-lg-4" align="center">
           <img class="img-circle" src="<?php echo $pgs[$a]['car_image']; ?>" alt="Generic placeholder image" width="180" height="180">
-          <h2><?php echo $pgs[$a]['car_company_name']; ?></h2>
-          <p><?php echo $pgs[$a]['car_model']; ?></p>
-          <p><a class="btn btn-default" href="customer/c.index.php?d=4&cid=<?php echo $pgs[$a]['id']; ?>" role="button">Book Now &raquo;</a></p>
+          <h2 align="center"><?php echo $pgs[$a]['car_company_name']; ?></h2>
+          <p align="center"><?php echo $pgs[$a]['car_model']; ?></p>
+          <p align="center"><a class="btn btn-default" href="customer/c.index.php?d=4&cid=<?php echo $pgs[$a]['id']; ?>" role="button">Book Now &raquo;</a></p>
         </div>
    <?php }

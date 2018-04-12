@@ -109,6 +109,7 @@ function get_single_user_by_lic($cnm)
 	}
 	return $typ;
 }
+
 function get_all_booked_cars($cid)
 {	include('../config.php');
 	$a=0;
@@ -128,11 +129,30 @@ function get_all_booked_cars($cid)
 	}
 	return $typ;
 }
+function get_all_booked_cars_current($cid)
+{	include('../config.php');
+	$a=0;
+	$typ=array();
+	$sql="SELECT * FROM `tbl_booking` WHERE `cust_id`='$cid' AND dateDiff(current_timeStamp,`book_date`)<5 ORDER BY `book_id` DESC";
+	$result=mysqli_query($connection,$sql);
+	while($row=mysqli_fetch_array($result))
+	{
+		$typ[$a]=array();
+		$typ[$a]['book_id']=$row['book_id'];
+		$typ[$a]['book_date']=stripslashes($row['book_date']);
+		$typ[$a]['cars_id']=stripslashes($row['cars_id']);
+		$typ[$a]['comments']=stripslashes($row['comments']);
+		$typ[$a]['cust_id']=stripslashes($row['cust_id']);
+		$typ[$a]['status']=stripslashes($row['status']);
+	$a++;
+	}
+	return $typ;
+}
 function get_all_booked_carsid_by_provider($cid)
 {	include('../config.php');
 	$a=0;
 	$typ=array();
-	$sql="SELECT DISTINCT tbl_cars.id,tbl_cars.car_company_name,tbl_cars.car_model,tbl_cars.car_regno,tbl_cars.car_image FROM tbl_cars RIGHT OUTER JOIN tbl_booking ON tbl_cars.id = tbl_booking.cars_id WHERE tbl_cars.car_pro_id = '$cid'";
+	$sql="SELECT DISTINCT tbl_cars.id,tbl_cars.car_company_name,tbl_cars.car_model,tbl_cars.car_regno,tbl_cars.car_image,tbl_booking.cust_id FROM tbl_cars RIGHT OUTER JOIN tbl_booking ON tbl_cars.id = tbl_booking.cars_id WHERE tbl_cars.car_pro_id = '$cid'";
 	$result=mysqli_query($connection,$sql);
 	while($row=mysqli_fetch_array($result))
 	{
@@ -142,6 +162,7 @@ function get_all_booked_carsid_by_provider($cid)
 		$typ[$a]['car_model']=stripslashes($row['car_model']);
 		$typ[$a]['car_regno']=stripslashes($row['car_regno']);
 		$typ[$a]['car_image']=stripslashes($row['car_image']);
+		$typ[$a]['cust_id']=stripslashes($row['cust_id']);
 		//$typ[$a]['cust_id']=stripslashes($row['cust_id']);
 		
 	$a++;

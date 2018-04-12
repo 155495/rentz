@@ -38,7 +38,7 @@ $sql="INSERT INTO `tbl_user` (`category`, `firstname`, `lastname`, `address`, `m
 $rs=insert_update($sql);
 if($rs=="OK"){
 	$msg="Registration Successfully";
-	header("Location:../index.php");
+	header("Location:../index.php?d=5");
 	echo $msg;
 
 }else{

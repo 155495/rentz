@@ -1,6 +1,6 @@
 <?php if(!session_id()) session_start();
 if(!isset($_SESSION['username'])){
-	header("Location:../index.php");}
+	header("Location:../index.php?d=5");}
 ?>
 
 
@@ -55,7 +55,8 @@ if(!isset($_SESSION['username'])){
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Rentz <span class="sr-only">(current)</span></a></li>
             <li><a href="c.index.php?d=1">Book a Car</a></li>
-            <li><a href="c.index.php?d=5">Currnt Booked Car</a></li>
+            <li><a href="c.index.php?d=5">Previous Booked Car</a></li>
+            <li><a href="c.index.php?d=6">Current  Booked Car</a></li>
              <li><a href="c.index.php?d=3">Search Car</a></li>
           </ul>
           
@@ -108,6 +109,12 @@ if(!isset($_SESSION['username'])){
 							<h2 class="sub-header " align="center">booked Cars</h2>
 							<?php
 							include('view_customer_booked_car.php');
+									 break;
+				case 6: 
+							?> 
+							<h2 class="sub-header " align="center">Current booked Cars(Lessthan 5 Days)</h2>
+							<?php
+							include('view_all_cuttentBookedcars_lessthen5.php');
 									 break;
 				}?>
           

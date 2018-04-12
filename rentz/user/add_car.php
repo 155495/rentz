@@ -25,8 +25,7 @@
      <div class="form-group">
    <input type="hidden"  name="usernameid"value="<?php echo $_SESSION['username'];?>" />
 	 <label>Select Model</label>
-	<select class="form-control" name="model">
-        <option><?php echo $_SESSION['username'];?></option>    
+	<select class="form-control" name="model">   
             <option>Maruti Suzuki</option>
             <option>Hyundai</option>
             <option>Honda</option>

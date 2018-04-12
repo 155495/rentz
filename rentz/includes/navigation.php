@@ -16,9 +16,9 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="index.php?d=1">Home</a></li>
-                <li><a>About</a></li>
-                <li id="addcar"><a>Contact</a></li>
-                <li><a data-toggle="modal" data-target="#myModal">Sign In </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModalabout">About</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModalcontact">Contact</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Sign In </a></li>
               </ul>
             </div>
           </div>

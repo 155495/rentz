@@ -14,7 +14,7 @@ if($rs=="OK"){
 		$msg="Booking errorrrr";
 		}
 	$msg="Booked  Successfully";
-	header("Location:../customer/c.index.php?d=1");
+	header("Location:../customer/c.index.php?d=6");
 	
 
 }else{
