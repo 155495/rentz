@@ -51,6 +51,7 @@ $pgs=$typ;
         <th>Company Name</th>
         <th>Regno</th>
         <th>Car Image</th>
+        <th>Car Status</th>
         <th>Action</th>
       </tr>
     </thead>   
@@ -62,8 +63,8 @@ $pgs=$typ;
         <td><?php echo $pgs[$a]['car_company_name']; ?></td>
          <td><?php echo $pgs[$a]['car_regno']; ?></td>
         <td class="center"> <img src="../<?php echo $pgs[$a]['car_image']; ?>" width="100" height="100" alt="Loading...."></td>
+         <td><?php  if($pgs[$a]['car_sts']==0){?> <Label class="btn btn-labeled btn-success"> Not Booked Yet</label> <?php }else if($pgs[$a]['car_sts']==2){?>  <Label class="btn btn-labeled btn-warning"> Booked &  Released</label> <?php } else {?> <Label class="btn btn-labeled btn-danger"> Booked </label> <?php }?> </td>
         <td class="center" style="width:80px;">
-        <a class="btn btn-info btn-xs" href="p.index.php?d=3&id=<?php echo $pgs[$a]['id']; ?>"><i class="glyphicon glyphicon-pencil"></i></a>
         <a class="btn btn-danger btn-xs" href="delete_car.php?id=<?php echo $pgs[$a]['id']; ?>"><i class="glyphicon glyphicon-trash"></i></a>			
 		</td>
       </tr>

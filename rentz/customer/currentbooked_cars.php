@@ -21,7 +21,7 @@ $pCnt=count($carid);
         <th>Booker Details</th>
         <th>Regno</th>
         <th>Car Image</th>
-        <th>Cancel Booking</th>
+        <th>Release Car for Others</th>
       </tr>
     </thead>   
     <tbody>
@@ -34,7 +34,7 @@ $pCnt=count($carid);
          <td><?php echo $carid[$a]['car_regno']; ?></td>
         <td class="center"> <img src="../<?php echo $carid[$a]['car_image']; ?>" width="100" height="100" alt="Loading...."></td>
         <td> <a href="db_cancel_booking.php?cid=<?php echo $carid[$a]['id'];?>"> <Label class="btn btn-labeled btn-danger"> 
-                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>cancel</Label></a></td>
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Release Car  </Label></a></td>
       </tr>
       
       <?php }?>

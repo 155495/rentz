@@ -34,6 +34,7 @@ if(!isset($_SESSION['username'])){
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 </head>
+
 <body>
 
 <div class="wrapper">
@@ -60,6 +61,18 @@ if(!isset($_SESSION['username'])){
                     <a href="index.php?d=1">
                         <i class="pe-7s-user"></i>
                         <p>User Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.php?d=4">
+                        <i class="pe-7s-user"></i>
+                        <p>Customers Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.php?d=5">
+                        <i class="pe-7s-user"></i>
+                        <p>Car Providers Profile</p>
                     </a>
                 </li>
                 <li class="active">
@@ -113,7 +126,7 @@ if(!isset($_SESSION['username'])){
                      
                         <li>
                             <a href="db_logout.php">
-                                <p>Log out</p>
+                                <p>Log out <i class="fa fa-lock"></i></p>
                             </a>
                         </li>
 						<li class="separator hidden-lg hidden-md"></li>
@@ -141,7 +154,7 @@ if(!isset($_SESSION['username'])){
 							  case 1:
 							  
 							  ?>
-                              <h4 class="title" align="center">All User Details</h4>
+                              <h4 class="title  btn-success" align="center">All User Details</h4>
                               <?php break;?>
                               <?php case 2: ?>
                                <h4 class="title" align="center">All Booked Cars</h4>
@@ -150,9 +163,21 @@ if(!isset($_SESSION['username'])){
                                <h4 class="title" align="center">All  Cars</h4>
                                <?php break;?>
                                <?php case 0: ?>
-                               <h4 class="title" align="center"><b>Rentz Admin Panel</b></h4>
-                               <p align="center" style="margin:50px;"> Administration Page of  Rentz sales & services</p>
+                               <h4 class="title" align="center"><b>Rentz Admin</b></h4>
+                               <p align="center" style="margin:50px;"></p>
+                               
                                <?php break;?>
+                                <?php case 4: ?>
+                               <h4 class="title" align="center"><b>Rentz Customers</b></h4>
+                               
+                               <?php break;?>
+                               <?php case 5: ?>
+                               <h4 class="title" align="center"><b>Rentz Car Providers</b></h4>
+                               
+                               <?php break;?>
+                               
+                               
+                               
             				 <?php }?>
                             </div>
                             
@@ -163,7 +188,7 @@ if(!isset($_SESSION['username'])){
 										switch($id){
 											
 											case 0:
-											
+												include('pages/admin_profile.php');
 											break;
 											case 1:
 												 include('pages/all users.php');
@@ -174,7 +199,12 @@ if(!isset($_SESSION['username'])){
 											case 3:
 												 include('pages/all_cars.php');
 											break;
-											
+											case 4:
+												 include('pages/all_customers.php');
+											break;
+											case 5:
+												 include('pages/all_providers.php');
+											break;
 											}
 
 							?>

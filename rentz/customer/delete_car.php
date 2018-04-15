@@ -7,10 +7,10 @@ $sql="DELETE FROM `tbl_cars` WHERE `id` = '$id'";
 if($res=="OK"){
 	$msg="Car  Removed successfully";
 
-	header("Location:index.php?d=1");
+	header("Location:p.index.php?d=1");
 }else{
 	$msg="Error ".$res;
-	header("Location:index.php?d=1");
+	echo $msg;
 } 
 
 ?>

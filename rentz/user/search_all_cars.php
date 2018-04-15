@@ -5,7 +5,7 @@ include('config.php');
 
 	$a=0;
 	$typ=array();
-	$sql="SELECT * FROM `tbl_cars` WHERE `car_sts`= 0  ORDER BY `id` DESC";
+	$sql="SELECT * FROM `tbl_cars` WHERE `car_sts` <> 1  ORDER BY `id` DESC";
 	$result=mysqli_query($connection,$sql);
 	while($row=mysqli_fetch_array($result))
 	{

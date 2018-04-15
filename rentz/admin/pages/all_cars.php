@@ -24,8 +24,8 @@ $counts=count($pgs);
                                         	<td><?php echo $pgs[$i]['car_model']; echo "  ";?></td>
                                         	<td><?php echo $pgs[$i]['car_colour'];?></td>
                                         	<td><?php echo $pgs[$i]['car_regno'];?></td>
-                                        	<td><?php echo $pgs[$i]['car_pro_id'];?></td>
-                                            <td> <img src="../<?php echo $pgs[$i]['car_image'];?>" alt="car image" height="50px" width="100px"/> </td>
+                                        	<td><?php $user=get_single_user_by_lic($pgs[$i]['car_pro_id']); echo $user['firstname']; echo " "; echo $user['lastname']; echo "<br>"; echo $user['address'];   ?></td>
+                                            <td> <img class="" src="../<?php echo $pgs[$i]['car_image'];?>" alt="car image" height="80" width="100"/>  </td>
                                         	
                                         </tr>
                                         <?php } ?>

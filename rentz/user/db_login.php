@@ -42,7 +42,7 @@ else{
 		
 }else{
 //3.1.3 If the login credentials doesn't match, he will be shown with an error message.
-$fmsg = "Invalid Login Credentials.";
+$fmsg = "Invalid Login Credentials. OR Admin is Blocked ";
 echo $fmsg;
 }
 }

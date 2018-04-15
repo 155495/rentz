@@ -21,9 +21,9 @@ $counts=count($pgs);
                                         <tr>
                                         	<td><?php echo $i+1 ?></td>
                                         	<td><?php echo $pgs[$i]['book_date']; echo "  ";?></td>
-                                        	<td><?php echo $pgs[$i]['cust_id'];?></td>
-                                        	<td><?php echo $pgs[$i]['cars_id'];?></td>
-                                        	<td><?php echo $pgs[$i]['comments'];?></td>
+                                        	<td><?php $user=get_single_user_by_lic($pgs[$i]['cust_id']); echo $user['firstname']; echo " "; echo $user['lastname']; echo "<br>"; echo $user['address']; ?></td>
+                                        	<td><?php  $cars=get_single_cars($pgs[$i]['cars_id']); echo $cars['car_model'];?></td>
+                                        	<td><?php echo $user['mobno'];?></td>
                                         </tr>
                                         <?php } ?>
                                     </tbody>

@@ -23,7 +23,58 @@ function get_all_users()
 	$a++;
 	}
 	return $typ;
-}function get_all_bookedcars()
+}
+function get_all_customers()
+{	include('../config.php');
+	$a=0;
+	$typ=array();
+	$sql="SELECT * FROM `tbl_user` WHERE `category` = 1 ORDER BY `id` DESC";
+	$result=mysqli_query($connection,$sql);
+	while($row=mysqli_fetch_array($result))
+	{
+		$typ[$a]=array();
+		$typ[$a]['id']=$row['id'];
+		$typ[$a]['address']=stripslashes($row['address']);
+		$typ[$a]['category']=stripslashes($row['category']);
+		$typ[$a]['firstname']=stripslashes($row['firstname']);
+		$typ[$a]['idphoto']=stripslashes($row['idphoto']);
+		$typ[$a]['lastname']=stripslashes($row['lastname']);
+		$typ[$a]['licenceno']=stripslashes($row['licenceno']);
+		$typ[$a]['licencephoto']=stripslashes($row['licencephoto']);
+		$typ[$a]['mobno']=stripslashes($row['mobno']);
+		$typ[$a]['password']=stripslashes($row['password']);
+		$typ[$a]['status']=stripslashes($row['status']);
+	$a++;
+	}
+	return $typ;
+}
+function get_all_providers()
+{	include('../config.php');
+	$a=0;
+	$typ=array();
+	$sql="SELECT * FROM `tbl_user` WHERE `category` = 0 ORDER BY `id` DESC";
+	$result=mysqli_query($connection,$sql);
+	while($row=mysqli_fetch_array($result))
+	{
+		$typ[$a]=array();
+		$typ[$a]['id']=$row['id'];
+		$typ[$a]['address']=stripslashes($row['address']);
+		$typ[$a]['category']=stripslashes($row['category']);
+		$typ[$a]['firstname']=stripslashes($row['firstname']);
+		$typ[$a]['idphoto']=stripslashes($row['idphoto']);
+		$typ[$a]['lastname']=stripslashes($row['lastname']);
+		$typ[$a]['licenceno']=stripslashes($row['licenceno']);
+		$typ[$a]['licencephoto']=stripslashes($row['licencephoto']);
+		$typ[$a]['mobno']=stripslashes($row['mobno']);
+		$typ[$a]['password']=stripslashes($row['password']);
+		$typ[$a]['status']=stripslashes($row['status']);
+	$a++;
+	}
+	return $typ;
+}
+
+
+function get_all_bookedcars()
 {	include('../config.php');
 	$a=0;
 	$typ=array();
@@ -110,8 +161,9 @@ function get_single_cars($cnm)
 }
 function get_single_user_by_lic($cnm)
 {
+	include('../config.php');
 	$sql="SELECT * FROM `tbl_user` WHERE `licenceno`='$cnm'";
-	$result=mysqli_query( $GLOBALS['connection'],$sql);
+	$result=mysqli_query($connection,$sql);
 	while($row=mysqli_fetch_array($result))
 	{
 		$typ=array();
